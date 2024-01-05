@@ -3,6 +3,7 @@ import axios from 'axios'
 import Bokeh from '@bokeh/bokehjs/build/js/bokeh.esm.min.js';
 import { Button } from '@mui/material';
 import { addStyles, EditableMathField, } from "react-mathquill";
+import Router from './routes/sections';
 
 addStyles();
 
@@ -18,14 +19,7 @@ function App() {
   }
   return (
     <>
-      <EditableMathField 
-        latex={latex}
-        onChange={(mathField) => {
-        setLatex(mathField.latex())
-        }}
-      />
-      <div id='bokeh' className="bk-root"></div>
-      <Button onClick={e => getPlotData()}>TEST</Button>
+      <Router />
     </>
   )
 }
