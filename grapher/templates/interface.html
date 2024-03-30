@@ -1,10 +1,11 @@
-<div class="container">
+{% csrf_token %}
+<div class="container-fluid">
   <div class="row">
-    <div class="col-4">
-      <p><span id="answer"></span></p>
-      <div class="btn btn-primary">Small Button</div>
+    <div class="col-12 col-sm-12 col-lg-4 d-flex justify-content-center align-items-center mt-3">
+      <span id="latex-input"></span>
+      <button type="button" id="submit-btn" class="btn btn-danger btn-lg">Graficar</button>
     </div>
-    <div class="col-8">
+    <div class="col-12 col-sm-12 col-lg-8 d-flex justify-content-center align-items-center">
       <div id="myplot"></div>
     </div>
   </div>
